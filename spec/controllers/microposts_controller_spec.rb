@@ -19,7 +19,7 @@ describe MicropostsController do
   describe "POST 'create'" do
 
     before(:each) do
-      @user = test_sign_in(Factory(:user))
+      test_sign_in(Factory(:user))
     end
 
     describe "failure" do
@@ -84,7 +84,8 @@ describe MicropostsController do
     describe "for an authorized user" do
 
       before(:each) do
-        @user = test_sign_in(Factory(:user))
+        @user = Factory(:user)
+	test_sign_in(@user)
         @micropost = Factory(:micropost, :user => @user)
       end
 

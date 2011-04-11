@@ -74,8 +74,8 @@ describe "LayoutLinks" do
     end
 
     it "should have a delete link when admin" do
-      @admin = Factory(:user, :email => "admin@example.com", :admin => true)
-      integration_sign_in(@admin)
+      admin = Factory(:user, :email => "admin@example.com", :admin => true)
+      integration_sign_in(admin)
       visit users_path
       response.should have_selector("a", :content => "delete")
     end
