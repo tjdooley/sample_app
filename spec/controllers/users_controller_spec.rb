@@ -357,7 +357,7 @@ describe UsersController do
     end
   end
 
-describe "follow pages" do
+  describe "follow pages" do
 
     describe "when not signed in" do
 
